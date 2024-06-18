@@ -1,0 +1,72 @@
+﻿<Page x:Class="LibraryARM.Veiw.Pages.BookAddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LibraryARM.Veiw.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1350"
+      Title="BookAddPage">
+
+    <Grid>
+        <StackPanel Margin="20">
+            <Label Content="Автор:"/>
+            <TextBox x:Name="txtAuthor"/>
+            
+            <Label Content="Название:"/>
+            <TextBox x:Name="txtName"/>
+
+            <Label Content="BBK:"/>
+            <ComboBox x:Name="MyComboBoxBBK" Width="200" Height="25" VerticalAlignment="Center" HorizontalAlignment="Left"
+                SelectionChanged="MyComboBox_SelectionChanged">
+                <ComboBoxItem Content="Общенаучное и дисциплинарное знание"/>
+                <ComboBoxItem Content="Естественные науки"/>
+                <ComboBoxItem Content="Технические науки"/>
+                <ComboBoxItem Content="Сельскохозяйцственные науки"/>
+                <ComboBoxItem Content="Медицина"/>
+                <ComboBoxItem Content="Общественные науки"/>
+                <ComboBoxItem Content="Наука. Культура. Просвещение"/>
+                <ComboBoxItem Content="Филологические науки"/>
+                <ComboBoxItem Content="Исскуство. Исскуство знание"/>
+                <ComboBoxItem Content="Религия. Мистика. Свободомыслие"/>
+                <ComboBoxItem Content="Философия. Философские науки."/>
+                <ComboBoxItem Content="Психология"/>
+                <ComboBoxItem Content="Литература универсального содержания"/>
+            </ComboBox>
+            
+            <Label Content="Издание:"/>
+            <ComboBox x:Name="MyComboBoxPublisher" Width="200" Height="25" VerticalAlignment="Center" HorizontalAlignment="Left"
+    SelectionChanged="MyComboBox_SelectionChanged">
+                <ComboBoxItem Content="ОООМосква"/>
+                <ComboBoxItem Content="ООАртём"/>
+                <ComboBoxItem Content="ОМизёв"/>
+            </ComboBox>
+            
+            <Label Content="Город издания:"/>
+            <ComboBox x:Name="MyComboBoxPlace" Width="200" Height="25" VerticalAlignment="Center" HorizontalAlignment="Left"
+SelectionChanged="MyComboBox_SelectionChanged">
+                <ComboBoxItem Content="Москва"/>
+                <ComboBoxItem Content="Артёмовск"/>
+                <ComboBoxItem Content="Мизёвск"/>
+            </ComboBox>
+
+            <Label Content="Год выпуска:"/>
+            <TextBox x:Name="txtYear"/>
+            
+            <Label Content="Количество листов:"/>
+            <TextBox x:Name="txtLists"/>
+            
+            <Button Content="Добавить" Click="AddBook_Click" Margin="0,5,0,0" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="3.366"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.941"/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button Content="Назад" Click="Back_Click" Margin="0,5,0,0"/>
+        </StackPanel>
+    </Grid>
+</Page>

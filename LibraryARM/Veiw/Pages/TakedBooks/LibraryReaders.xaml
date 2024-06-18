@@ -1,0 +1,20 @@
+﻿<Page x:Class="LibraryARM.Veiw.Pages.TakedBooks.LibraryReaders"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LibraryARM.Veiw.Pages.TakedBooks"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1350"
+      Title="LibraryReaders">
+
+    <Grid>
+
+        <Grid>
+            <Button Name="Look" Click="BtnLook_Click" Content="Просмотр выданных книг" HorizontalAlignment="Left" Width="180"/>
+            <Button Name="Taked" Click="BtnTaked_Click" Content="Принять книгу" HorizontalAlignment="Right" Width="180"/>
+            <Button Name="Give" Click="BtnGive_Click" Content="Выдать книгу" HorizontalAlignment="Center" Width="180"/>
+            <Button Name="Back" Click="BtnBack_Click" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="180"/>
+        </Grid>
+    </Grid>
+</Page>

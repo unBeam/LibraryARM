@@ -1,0 +1,43 @@
+﻿<Window x:Class="LibraryARM.Veiw.Pages.Readers.EditReader"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryARM.Veiw.Pages.Readers"
+        mc:Ignorable="d"
+        Title="EditReader" Height="450" Width="1350">
+    
+    <Grid Margin="0,0,0,-58">
+        <StackPanel Margin="20">
+            <Label Content="ФИО:"/>
+            <TextBox x:Name="FIO"/>
+
+            <Label Content="Дата Рождения"/>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="День"/>
+                <TextBox x:Name="Day" Width="200" Margin="0,0,5,0"/>
+                <Label Content="Месяц"/>
+                <TextBox x:Name="Month" Width="200" Margin="0,0,5,0"/>
+                <Label Content="Год"/>
+                <TextBox x:Name="Year" Width="200"/>
+            </StackPanel>
+
+            <Label Content="Место работы"/>
+            <TextBox x:Name="PlaceWork"/>
+
+            <Label Content="Права доступа читателя:"/>
+            <ComboBox x:Name="MyComboBoxBBK" Width="200" Height="25" VerticalAlignment="Center" HorizontalAlignment="Left"
+    SelectionChanged="MyComboBox_SelectionChanged">
+                <ComboBoxItem Content="Только абонемент"/>
+                <ComboBoxItem Content="Только читальный зал"/>
+                <ComboBoxItem Content="Абонемент и читальный зал"/>
+            </ComboBox>
+            <Label Content="Номер телефона"/>
+            <TextBox x:Name="Number"/>
+
+
+            <Button Content="Редактировать" Click="AddBook_Click" Margin="0,5,0,0"/>
+            <Button Content="Назад" Click="Back_Click" Margin="0,5,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,41 @@
+﻿<Page x:Class="LibraryARM.Veiw.Pages.BookListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LibraryARM.Veiw.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1350"
+      Title="BookListPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Rectangle Grid.Row="1" Fill="LightGreen"></Rectangle>
+
+        <ListView x:Name="BooksListView" SelectionChanged="BooksListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Автор" DisplayMemberBinding="{Binding Author}" Width="100"/>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                    <GridViewColumn Header="Количество книг" DisplayMemberBinding="{Binding Count}" Width="200"/>
+                    <GridViewColumn Header="BBK" DisplayMemberBinding="{Binding BBK}" Width="100"/>
+                    <GridViewColumn Header="Издатель" DisplayMemberBinding="{Binding PublishingHouse}" Width="150"/>
+                    <GridViewColumn Header="Город публикации" DisplayMemberBinding="{Binding PlacePublishing}" Width="200"/>
+                    <GridViewColumn Header="Год" DisplayMemberBinding="{Binding Year}" Width="150"/>
+                    <GridViewColumn Header="Количество листов" DisplayMemberBinding="{Binding CountOfLists}" Width="200"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Name="Add" Click="BtnAdd_Click" Content="Добавить" HorizontalAlignment="Center" Padding="15,0,15,3" Grid.Row="1"/>
+        <Button Name="Back" Click="BtnBack_Click" Content="Назад" HorizontalAlignment="Left" Padding="15,0,15,3" Grid.Row="1"/>
+        <Button Name="Find" Click="Find_Click" Content="Поиск" HorizontalAlignment="Right" Padding="15,0,15,3" Margin ="0,0,200,0" Grid.Row="1"/>
+        <TextBox x:Name="FindTextBox" HorizontalAlignment="Right" Margin ="0,0,300,0" Grid.Row="1" Width="120" />
+        <Button Name="Excel" Click="BtnExcel_Click" Content="Вывести список" HorizontalAlignment="Right" Padding="15,0,15,3" Grid.Row="1"/>
+    </Grid>
+</Page>

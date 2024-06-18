@@ -1,0 +1,35 @@
+﻿<Page x:Class="LibraryARM.Veiw.Pages.Librarian"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LibraryARM.Veiw.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1350"
+      Title="Librarian">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Книги" Name="BookButton" Click="Books_Click" Width="175" Height="50" Margin="0,0,0,15" ></Button>
+            <Button Content="Учёт выдачи" x:Name="GiveBook" Click="GiveBooks_Click" Width="175" Height="50" Margin="0,0,0,15"></Button>
+            <Button Content="Список читателей" x:Name="Readers" Click="Readers_Click" Width="175" Height="50" Margin="0,0,0,15"></Button>
+            <Button Content="Добавить читателя" x:Name="AddReaders" Click="AddReaders_Click" Width="175" Height="50" Margin="0,0,0,15"></Button>
+            <Button Content="Посмотреть книги" x:Name="CheckBooks" Click="CheckBooks_Click" Width="175" Height="50" ></Button>
+            <Button Content="Посмотреть должников" x:Name="CheckTaked" Click="CheckTaked_Click" Width="175" Height="50"  Margin="0,0,0,15" ></Button>
+            <Button Content="Добавить библиотекаря" x:Name="AddLibrian" Click="AddLibrian_Click" Width="175" Height="50"  Margin="0,0,0,15" ></Button>
+        </StackPanel>
+
+        <Frame x:Name="FrameLibrian" NavigationUIVisibility="Hidden" Grid.Row="2" Grid.ColumnSpan="3"/>
+    </Grid>
+</Page>

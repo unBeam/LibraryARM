@@ -1,0 +1,53 @@
+﻿<Page x:Class="LibraryARM.Veiw.Pages.EditBooksPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LibraryARM.Veiw.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1350"
+      Title="EditBooksPage">
+
+    <Grid>
+        <StackPanel Margin="20,20,20,-49">
+            <Label Content="Автор:"/>
+            <TextBox x:Name="txtAuthor" Text="{Binding Author}"/>
+
+            <Label Content="Название:"/>
+            <TextBox x:Name="txtName" Text="{Binding Name}"/>
+
+            <Label Content="BBK:"/>
+            <ComboBox x:Name="MyComboBoxBBK" Width="200" Height="25" VerticalAlignment="Center" HorizontalAlignment="Left"
+    SelectionChanged="MyComboBox_SelectionChanged" Text="{Binding BBK}">
+                <ComboBoxItem Content="Общенаучное и дисциплинарное знание"/>
+                <ComboBoxItem Content="Естественные науки"/>
+                <ComboBoxItem Content="Технические науки"/>
+                <ComboBoxItem Content="Сельскохозяйцственные науки"/>
+                <ComboBoxItem Content="Медицина"/>
+                <ComboBoxItem Content="Общественные науки"/>
+                <ComboBoxItem Content="Наука. Культура. Просвещение"/>
+                <ComboBoxItem Content="Филологические науки"/>
+                <ComboBoxItem Content="Исскуство. Исскуство знание"/>
+                <ComboBoxItem Content="Религия. Мистика. Свободомыслие"/>
+                <ComboBoxItem Content="Философия. Философские науки."/>
+                <ComboBoxItem Content="Психология"/>
+                <ComboBoxItem Content="Литература универсального содержания"/>
+            </ComboBox>
+
+            <Label Content="Издатель:"/>
+            <TextBox x:Name="txtPublisher" Text="{Binding PublishingHouse}"/>
+
+            <Label Content="Место издания:"/>
+            <TextBox x:Name="txtPlace" Text="{Binding PlacePublishing}"/>
+
+            <Label Content="Год выпуска:"/>
+            <TextBox x:Name="txtYear" Text="{Binding Year}"/>
+
+            <Label Content="Количество листов:"/>
+            <TextBox x:Name="txtLists" Text="{Binding CountOfLists}"/>
+
+            <Button Content="Редактировать" Click="EditBook_Click" Margin="0,5,0,0"/>
+            <Button Content="Назад" Click="Back_Click" Margin="0,5,0,0"/>
+        </StackPanel>
+    </Grid>
+</Page>
